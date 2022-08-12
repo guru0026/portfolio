@@ -14,14 +14,10 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    width: 295px;
+    width: 85%;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+
 
 h1 {
     position: absolute;
@@ -54,10 +50,14 @@ nav a:link, nav a:visited {
     color: #FF9D00;
 }
 
+nav ul li:hover {
+    color: white;
+    background-color:#00003B;
+}
+
 .logo img{
     width:75px;
     float: left;
-    z-index: 1;
     background-color: #E4EFEE;
 }
 
@@ -69,7 +69,7 @@ nav a:link, nav a:visited {
 
 .head-grid {
     display: grid;
-    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-columns: 20% 20% 20% 20%;
 }
 
 .tile {
@@ -77,9 +77,10 @@ nav a:link, nav a:visited {
     text-align: center;
 }
 
-/* =====    MAIN GALLERY TILES  ===== */
 
-.checkered-01 {
+/* =====    HOME GALLERY TILES  ===== */
+
+.checkered01 {
     display: grid;
     justify-content: left;
     grid:
@@ -88,105 +89,176 @@ nav a:link, nav a:visited {
         "main-image main-image main-image text-01"
         "text-02 image-02 text-03 image-03"
         "image-04 text-04 image-05 text-05";
-    grid-template-columns: 75px 75px 75px 75px;
-    grid-template-rows: 75px 75px 75px 75px 75px;
-    max-width: 300px;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 7rem 7rem 7rem 7rem 7rem;
+    min-width: 27rem;
 }
 
-.checkered-01 > div:first-child {
+.checkered01 > div:first-child {
     grid-area: main-image;
-
+    background-image: url(/images/photography/road/road-225w.jpg);
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(2) {
+.checkered01 > div:nth-child(2) {
+    background-image: url(/images/graphic-design/batman/batman-75w.jpg);
     grid-area: image-02;
-
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(3) {
+.checkered01 > div:nth-child(3) {
     grid-area: image-03;
-
+    background-image: url(/images/web-dev/final2/final2-75w.png);
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(4) {
+.checkered01 > div:nth-child(4) {
     grid-area: image-04;
-
+    background-image: url(/images/ux/screenshot02/screenshot02-75w.png);
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(5) {
+.checkered01 > div:nth-child(5) {
     grid-area: image-05;
-
+    background-image: url(/images/architecture/05/05-75w.png);
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(6) {
+.checkered01 > div:nth-child(6) {
     grid-area: text-01;
-
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(7) {
+.checkered01 > div:nth-child(7) {
     grid-area: text-02;
-
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(8) {
+.checkered01 > div:nth-child(8) {
     grid-area: text-03;
-
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(9) {
+.checkered01 > div:nth-child(9) {
     grid-area: text-04;
-
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(10) {
+.checkered01 > div:nth-child(10) {
     grid-area: text-05;
-
+    background-size: cover;
 }
-.checkered-01 > div:nth-child(11) {
+.checkered01 > div:nth-child(11) {
     grid-area: navmenu;
+    background-size: cover;
+}
 
+.checkered01 h2, .checkered02 h2 {
+    color: white;
+    font-size: x-large;
+    font-weight:bold;
+    padding-top: 6rem;
 
 }
 
-/* =====    PORTFOLIO GALLERY TILES (photography)    ===== */
+/* =====    PORTFOLIO GALLERY TILES     ===== */
+/* =====  photography    ===== */
 
 .checkered02 {
-    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: grid;
-    justify-content: center;
+    justify-content: left;
     grid:
-        "text-06 main-imageb main-imageb main-imageb"
-        "image-06 main-imageb main-imageb main-imageb"
-        "text-07 main-image main-image main-imageb"
-        "image-07 text-08 image-08 text-09";
-    grid-template-columns: 75px 75px 75px 75px;
-    grid-template-rows: 75px 75px 75px 75px;
-    max-width: 300px;
+    "main-image main-image main-image navmenu"
+    "main-image main-image main-image navmenu"
+    "main-image main-image main-image text-01"
+    "text-02 image-02 text-03 image-03"
+    "image-04 text-04 image-05 text-05"
+    "void01 large large large"
+    "small01 large large large"
+    "void02 large large large"
+    "small02 void03 small03 void04";
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem 7rem;
+    min-width: 27rem;
 }
 
 .checkered02 > div:first-child {
-    grid-area: main-imageb;
-
+    grid-area: main-image;
+    background-image: url(/images/photography/road/road-225w.jpg);
+    background-size: cover;
 }
 .checkered02 > div:nth-child(2) {
-    grid-area: image-06;
-
+    grid-area: image-02;
+    background-image: url(/images/photography/copper/copper-75w.jpg);
+    background-size: cover;
 }
 .checkered02 > div:nth-child(3) {
-    grid-area: image-07;
-
+    grid-area: image-03;
+    background-image: url(/images/photography/stairs/stairs-75w.jpg);
+    background-size: cover;
 }
 .checkered02 > div:nth-child(4) {
-    grid-area: image-08;
-
+    grid-area: image-04;
+    background-image: url(/images/photography/chess/chess-75w.jpg);
+    background-size: cover;
 }
 .checkered02 > div:nth-child(5) {
-    grid-area: text-06;
-
+    grid-area: image-05;
+    background-image: url(/images/photography/sunset/sunset-75w.jpg);
+    background-size: cover;
 }
 .checkered02 > div:nth-child(6) {
-    grid-area: text-07;
-
+    grid-area: text-01;
 }
 .checkered02 > div:nth-child(7) {
-    grid-area: text-08;
+    grid-area: text-02;
 
 }
 .checkered02 > div:nth-child(8) {
-    grid-area: text-09;
-
+    grid-area: text-03;
 }
+.checkered02 > div:nth-child(9) {
+    grid-area: text-04;
+}
+.checkered02 > div:nth-child(10) {
+    grid-area: text-05;
+}
+
+/* === Graphic Design === */
+
+.checkered02 > div:nth-child(11) {
+    grid-area: navmenu;
+}
+.checkered02 > div:nth-child(12) {
+    grid-area: large;
+    background-image: url(/images/graphic-design/batman/batman-225w.jpg);
+    background-size: cover;
+}
+.checkered02 > div:nth-child(13) {
+    grid-area: small01;
+    background-image: url(/images/graphic-design/kayotea/Kayotea_Hari-75w.jpg);
+    background-size: cover;
+}
+.checkered02 > div:nth-child(14) {
+    grid-area: small02;
+    background-image: url(/images/graphic-design/scaredycat/scaredyca-75w.jpg);
+    background-size: cover;
+}
+.checkered02 > div:nth-child(15) {
+    grid-area: small03;
+    background-image: url(/images/graphic-design/scifi/scifiposter-75w.jpg);
+    background-size: cover;
+}
+.checkered02 > div:nth-child(16) {
+    grid-area: void01;
+    background-image: url(/images/photography/sunset/sunset-75w.jpg);
+    background-size: cover;
+}
+.checkered02 > div:nth-child(17) {
+    grid-area: void01;
+}
+.checkered02 > div:nth-child(18) {
+    grid-area: void02;
+}
+.checkered02 > div:nth-child(19) {
+    grid-area: void03;
+}
+.checkered02 > div:nth-child(20) {
+    grid-area: void04;
+}
+
 
 /* =====    ABOUT ME       ====== */
 
@@ -198,7 +270,7 @@ nav a:link, nav a:visited {
         "textbody textbody";
     grid-template-columns: 225px 75px;
     grid-template-rows: 225px 275px;
-    max-width: 300px;
+    max-width: 27rem;
 }
 
 .textgrid > div:first-child {
@@ -234,6 +306,7 @@ nav a:link, nav a:visited {
     display: inline-block;
 }
 
+
 /* =====    COLLABORATION SECTION       ====== */
 
 .collaborate {
@@ -245,6 +318,7 @@ nav a:link, nav a:visited {
 .collaborate img {
     width: 75px;
     float: right;
+    padding-right: 15rem;
 }
 
 .collaborate > div:first-child {
@@ -324,10 +398,35 @@ footer div:nth-child(2) {
     grid-area: insta;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 600px) {
     .wrapper {
-        max-width: 1200px;
+        max-width: 700px;
+    }
+    html {
+        font-size: 14px;
     }
 }
 
+@media screen and (min-width: 750px) {
+    .wrapper {
+        max-width: 900px;
+    }
+    html {
+        font-size: 16px;
+    }
+}
 
+@media screen and (min-width: 950px) {
+    .wrapper {
+        max-width: 2000px;
+    }
+    html {
+        font-size: 18px;
+    }
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
